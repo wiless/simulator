@@ -49,7 +49,15 @@ $ git clone git@github.com:wiless/simulator.git
 <a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
 
 <p>Some modules are suported by <a href="https://github.com/oldmonk" class="user-mention">@oldmonk</a>. </p>
-
+{% highlight ruby %}
+def show
+  @widget = Widget(params[:id])
+  respond_to do |format|
+    format.html # show.html.erb
+    format.json { render json: @widget }
+  end
+end
+{% endhighlight %}
 <h3>
 <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
 <!--<div class="g-page" data-width="200" data-href="//plus.google.com/u/0/103230297927302948459" data-theme="dark" data-rel="publisher"></div>-->
